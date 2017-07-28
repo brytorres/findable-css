@@ -1,0 +1,32 @@
+// BASE
+
+@import url('');
+
+html { 
+    font-size: 62.5%;
+} 
+
+body {
+    background-color: $offwhite;
+}
+
+p {
+    font-size: 1.6rem;
+    color: $color2;
+    font-family: $font1;
+}
+
+a {
+color: $color3;
+text-decoration: none;
+}
+
+a:visited {
+color: lighten($color3, 20%);
+text-decoration: none;
+}
+
+a:hover {
+color: $color4;
+text-decoration: none;
+}

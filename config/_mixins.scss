@@ -1,0 +1,28 @@
+// MIXINS
+
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
